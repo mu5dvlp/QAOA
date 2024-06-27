@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # スクリプトをコピー
-COPY maxCut.ipynb \
+COPY maxCut.ipynb \ 
+    commonLogic.py \
     /app/
 
 # //ーーーーーーーーーーーーーーーーーーーーー
