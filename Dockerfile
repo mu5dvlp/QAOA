@@ -29,9 +29,6 @@ RUN pip install qiskit qiskit_aer qiskit_optimization
 RUN pip install matplotlib
 RUN pip install pylatexenc
 
-# plot_state_qshpere用
-RUN pip install seaborn
-
 # 〜〜〜
 RUN pip install scipy
 
