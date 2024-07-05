@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # スクリプトをコピー
 COPY maxCut.ipynb \ 
+    maxCut_RemoteJob.ipynb \ 
     commonLogic.py \
     requirements.txt \
     /app/
