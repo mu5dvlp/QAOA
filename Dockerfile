@@ -15,26 +15,13 @@ RUN apt-get update && apt-get install -y \
 # スクリプトをコピー
 COPY maxCut.ipynb \ 
     commonLogic.py \
+    requirements.txt \
     /app/
 
 # //ーーーーーーーーーーーーーーーーーーーーー
 # pipをアップグレード
 RUN pip install --upgrade pip
-
-# 〜〜〜
-# qiskitのインストール
-RUN pip install qiskit qiskit_aer qiskit_optimization
-
-# 回路図などの画像生成用
-RUN pip install matplotlib
-RUN pip install pylatexenc
-
-# 〜〜〜
-RUN pip install scipy
-
-# 〜〜〜
-# jupyter notebookのインストール
-RUN pip install notebook
+RUN pip install --no-cache-dir -r requirements.txt
 
 # //ーーーーーーーーーーーーーーーーーーーーー
 # Jupyter Notebookを起動するコマンドを指定

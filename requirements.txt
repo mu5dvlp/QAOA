@@ -1,0 +1,10 @@
+qiskit
+qiskit_aer
+qiskit_optimization
+
+matplotlib
+pylatexenc
+
+scipy
+
+notebook
