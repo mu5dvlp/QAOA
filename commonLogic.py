@@ -1,24 +1,6 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
-I = np.eye(2)
-Z = np.array([[1,0],
-              [0,-1]])
-
-def get_Z_list(num):
-    z_list = []
-    # Z[i]を作成
-    for i in range(num):
-        # テンソル積を計算
-        z_i = 1
-        for j in range(num):
-            if i==j: z_i=np.kron(z_i,Z)
-            else: z_i=np.kron(z_i,I)
-        z_list.append(z_i)
-    return z_list
-
-
-# //ーーーーーーーーーーーーーーーーーーーーー
+# //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 def get_color_lerp(start,end,rate):
     if rate<0: rate=0
     elif rate>1: rate=1
