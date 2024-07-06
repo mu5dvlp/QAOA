@@ -1,5 +1,5 @@
 from qiskit import *
-from qiskit.quantum_info import Operator, Statevector
+from qiskit.quantum_info import Operator
 import numpy as np
 
 # //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
