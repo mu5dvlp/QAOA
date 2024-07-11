@@ -13,8 +13,9 @@ def get_Z_list(num):
     # Z[i]を作成
     for i in range(num):
         # テンソル積を計算
+        # Qiskitは通常の状態計算と異なり、順番が右から左となります
         z_i = 1
-        for j in range(num):
+        for j in range(num-1,-1,-1):
             if i==j: z_i=np.kron(z_i,Z)
             else: z_i=np.kron(z_i,I)
         z_list.append(z_i)
