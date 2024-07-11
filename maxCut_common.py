@@ -23,13 +23,13 @@ def get_Z_list(num):
 # //ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 # コストハミルトニアン
 def get_operator_costHamiltonian(num,edges,weights):
-    Z = get_Z_list(num)
+    z_list = get_Z_list(num)
     dim = 2**num
     matrix = np.zeros((dim,dim), dtype=complex)
     for k in range(len(edges)):
         i,j = edges[k]
         w = weights[k]
-        matrix+=w*(np.eye(dim) - np.dot(Z[i],Z[j]))
+        matrix+=w*(np.eye(dim) - np.dot(z_list[i],z_list[j]))
     matrix*=-1/2
     return Operator(matrix)
 
